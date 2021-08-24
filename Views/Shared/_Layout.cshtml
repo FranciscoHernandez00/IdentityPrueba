@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - IdentityPrueba</title>
+    <link href="~/css/Style.css" rel="stylesheet" />
+    <link href="~/css/dashboard.css" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="sidebar close">
+        <div class="logo-details">
+            <i class="bx bxl-c-plus-plus"></i>
+            <span class="logo_name"> FrancoGhost </span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="/Home/DashBoard">
+                    <i class="bx bx-grid-alt"></i>
+                    <span class="link_name"> DashBoard </span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li>
+                        <a href="/Home/DashBoard" class="link_name"> DashBoard </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="icon-link">
+                    <a href="#">
+                        <i class="bx bx-collection"></i>
+                        <span class="link_name">Category</span>
+                    </a>
+                    <i class="bx bx-chevron-down arrow"></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Category</a></li>
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Card Design</a></li>
+                    <li><a href="#">Login Form</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="icon-link">
+                    <a href="#">
+                        <i class="bx bx-book-alt"></i>
+                        <span class="link_name">Posts</span>
+                    </a>
+                    <i class="bx bx-chevron-down arrow"></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Posts</a></li>
+                    <li><a href="#">HTML & CSS </a></li>
+                    <li><a href="#">Javascript</a></li>
+                    <li><a href="#">C# & SQLServer</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-pie-chart-alt-2"></i>
+                    <span class="link_name"> Analytics </span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li>
+                        <a class="link_name"> Analytics </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-line-chart"></i>
+                    <span class="link_name"> Chart </span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li>
+                        <a class="link_name"> Chart </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="icon-link">
+                    <a href="#">
+                        <i class="bx bx-plug"></i>
+                        <span class="link_name">Plugins</span>
+                    </a>
+                    <i class="bx bx-chevron-down arrow"></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Plugins</a></li>
+                    <li><a href="#">UI Face</a></li>
+                    <li><a href="#">Pigments</a></li>
+                    <li><a href="#">Box Icons</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-compass"></i>
+                    <span class="link_name"> Explore </span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li>
+                        <a class="link_name"> Explore </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-history"></i>
+                    <span class="link_name"> History </span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li>
+                        <a class="link_name"> History </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-cog"></i>
+                    <span class="link_name"> Settings </span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li>
+                        <a class="link_name"> Settings </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <partial name="_LoginPartial.cshtml" />
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <nav>
+            <div class="sidebar-button">
+                <i class="bx bx-menu sidebarBtn"></i>
+                <span class="dashboard"> DashBoard </span> @* class="dashboard" *@
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search..."/>
+                <i class="bx bx-search"></i>
+            </div>
+            <div class="perfil-details">
+                <img src="https://cdn0.iconfinder.com/data/icons/set-ui-app-android/32/8-512.png" alt="" />
+                <span class="admin_name"> Alexander </span>
+                <i></i>
+            </div>
+        </nav>
+        <div class="home-content">
+            @RenderBody()
+        </div>
+    </section>
+        <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2021 - IdentityPrueba - <a>Privacy</a>
+            </div>
+        </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
