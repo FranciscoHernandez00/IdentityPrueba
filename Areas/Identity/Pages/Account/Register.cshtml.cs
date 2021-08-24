@@ -92,6 +92,7 @@ namespace IdentityPrueba.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
+                    //Todos los nuevos usuarios tienen asignado por defecto el rol de Vendedor
                     await _userManager.AddToRoleAsync(user, Enums.Roles.Vendedor.ToString());
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
