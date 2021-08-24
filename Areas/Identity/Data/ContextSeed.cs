@@ -18,7 +18,7 @@ namespace IdentityPrueba.Areas.Identity.Data
 
         public static async Task SeedSuperAdminAsync(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
         {
-            //Seed Default User
+            //Seed de un usuario por defecto.
             var defaultUser = new ApplicationUser
             {
                 UserName = "superadmin",
